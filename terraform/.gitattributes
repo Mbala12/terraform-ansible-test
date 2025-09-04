@@ -1,0 +1,10 @@
+# Normalize line endings
+* text=auto
+
+# Don't treat Terraform provider binaries as text
+*.exe binary
+*.zip binary
+*.tar.gz binary
+
+# Prevent committing .terraform directory
+.terraform/ export-ignore

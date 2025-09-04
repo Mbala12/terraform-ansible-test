@@ -1,0 +1,60 @@
+# === Terraform ===
+
+# Local .terraform directory (plugins, backend, modules)
+.terraform/
+
+# Terraform state files
+*.tfstate
+*.tfstate.*
+
+# Crash log files
+crash.log
+
+# Override files usually containing secrets
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# CLI configuration files
+.terraformrc
+terraform.rc
+
+# Sensitive variable files
+*.tfvars
+*.tfvars.json
+
+# Plan output files
+*.tfplan
+
+# Lock file (can be ignored if not using Terraform 0.14+ with teams)
+.terraform.lock.hcl
+
+# === Ansible ===
+
+# SSH key files (if generated locally)
+*.pem
+*.key
+
+# Vault password file (never commit this)
+.vault_pass.txt
+
+# Ansible log files
+ansible.log
+
+# === General ===
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Editor/IDE config
+.vscode/
+.idea/
+*.swp
+*.swo
+*.bak
+
+# Python cache (if using Ansible roles with Python)
+__pycache__/
+*.pyc
