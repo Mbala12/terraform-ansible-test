@@ -58,3 +58,6 @@ Thumbs.db
 # Python cache (if using Ansible roles with Python)
 __pycache__/
 *.pyc
+
+
+TerraiformwthAnsible
