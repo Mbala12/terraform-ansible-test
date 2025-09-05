@@ -30,7 +30,7 @@ resource "aws_security_group" "ssh_http" {
   }
 }
 
-resource "aws_instance" "ubuntu_ec2" {
+resource "aws_instance" "ubuntu_ec1" {
   ami                         = var.ubuntu_ami
   instance_type               = var.instance_type
   key_name                    = var.key_name
@@ -39,6 +39,22 @@ resource "aws_instance" "ubuntu_ec2" {
 
   tags = {
     Name = "Instance-1"
+  }
+
+  provisioner "local-exec" {
+    command = "echo ${self.public_ip} > ../ansible/ec2_ip.txt"
+  }
+}
+
+resource "aws_instance" "ubuntu_ec2" {
+  ami                         = var.ubuntu_ami
+  instance_type               = var.instance_type
+  key_name                    = var.key_name
+  vpc_security_group_ids      = [aws_security_group.ssh_http.id]
+  associate_public_ip_address = true
+
+  tags = {
+    Name = "Instance-2"
   }
 
   provisioner "local-exec" {
