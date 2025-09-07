@@ -1,4 +1,4 @@
-resource "aws_security_group" "ssh_http" {
+/* resource "aws_security_group" "ssh_http" {
   name        = "ssh_http_sg"
 
   ingress {
@@ -60,4 +60,4 @@ resource "aws_instance" "ubuntu_ec2" {
   provisioner "local-exec" {
     command = "echo ${self.public_ip} > ../ansible/ec2_ip.txt"
   }
-}
+} */
