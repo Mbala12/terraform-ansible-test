@@ -1,6 +1,6 @@
 .env
-ec2_inventory.ini
-injection-ec2-ip.sh
-ec2_ip_addr.txt
-ec2_ip.txt
-inventory.ini
+
+*.txt
+*.ini
+vars.yml
+*.sh
